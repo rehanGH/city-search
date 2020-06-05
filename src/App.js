@@ -7,7 +7,7 @@ class App extends Component {
     return (
       <div className="City">
         <h1 className="main-header">City Searcher</h1>
-          <Citysearch></Citysearch>
+          <Citysearch/>
       </div>
     );
   }

@@ -15,6 +15,7 @@ export default class Citysearch extends Component {
         this.setState({
             city: events.target.value
         });
+
         const url = `http://ctp-zip-api.herokuapp.com/city/`;
         axios.get(url + events.target.value.toUpperCase())
         .then((response) => {

@@ -48,3 +48,8 @@
   background-color:rgb(48, 43, 43);
   color: rgb(226,226,226);
 }
+
+.search{
+  display: flex;
+  justify-content: center;
+}

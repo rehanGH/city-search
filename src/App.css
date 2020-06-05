@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.main-header{
+  margin-top: 0;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+  margin-bottom: 1.4;
+  background-color:rgb(48, 43, 43);
+  color: rgb(226,226,226);
+}

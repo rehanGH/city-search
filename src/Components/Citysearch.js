@@ -5,7 +5,7 @@ export default class Citysearch extends Component {
     constructor(props){
         super(props);
         this.state ={
-            city: null,
+            city: "",
             newCity: []
         };
         this.handleCityChange = this.handleCityChange.bind(this);
@@ -15,8 +15,9 @@ export default class Citysearch extends Component {
         this.setState({
             city: events.target.value
         });
+
         const url = `http://ctp-zip-api.herokuapp.com/city/`;
-        axios.get(url + events.target.value)
+        axios.get(url + events.target.value.toUpperCase())
         .then((response) => {
             const data = response.data;
             this.setState({newCity: data});
@@ -41,9 +42,11 @@ export default class Citysearch extends Component {
                <div className = "zip">
                    {this.state.newCity.map(zip => {
                        return (
-                       <div>
-                           {zip.LocationText}<br></br>
-                           <br></br>
+                       <div
+                        className="outputs"
+                        key={zip.RecordNumber}
+                       >
+                           {zip}
                        </div>)
                    })
                }

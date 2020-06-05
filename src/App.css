@@ -50,6 +50,13 @@
 }
 
 .search{
+  padding-bottom: 4px;
+  display: flex;
+  justify-content: center;
+}
+
+.outputs{
+  padding-bottom: 4px;
   display: flex;
   justify-content: center;
 }

@@ -27,31 +27,19 @@ export default class Citysearch extends Component {
 
 
     render() {
-        let display;
-            display = (
+        return(
+        <div>
             <div className = "search">
                 <label htmlFor="zip">Enter a city name: </label>
-                <input placeholder="SPRINGFIELD" type="text" value={this.state.city} onChange = {this.handleCityChange} ></input>
+                <input placeholder="SPRINGFIELD" type="text" value={this.state.city} onChange = {this.handleCityChange}></input>
             </div>
-               );
-               return (
-               <div>
-               <div>
-                   {display}
-               </div>
-               <div className = "zip">
-                   {this.state.newCity.map(zip => {
-                       return (
-                       <div
-                        className="outputs"
-                        key={zip.RecordNumber}
-                       >
-                           {zip}
-                       </div>)
-                   })
-               }
-               </div>
-               </div>
-               )
-           }
-       }
+            <div className = "zip">
+                { this.state.newCity.map(zip => {return (
+                    <div className="outputs" key={zip.RecordNumber}>
+                        {zip}
+                    </div>)})}
+            </div>
+        </div>
+        )
+    }
+}
